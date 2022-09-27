@@ -1,0 +1,97 @@
+.single {
+  min-height: calc(100vh - var(--header));
+  padding-block: 5rem;
+
+  .item-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    height: min(90vh, 900px);
+
+    .item-img {
+      height: inherit;
+      img {
+        height: 100%;
+        border-radius: var(--border-3) ;
+      }
+    }
+
+    .item-description {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    
+        .item-title {
+          font-size: 2rem;
+          text-transform: uppercase;
+          font-weight: 900;
+        }
+    
+        .price {
+          color: var(--clr-n-300);
+        }
+        .color-container {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+    
+          & > div {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+          }
+    
+          & > p {
+            font-size: 0.8rem;
+          }
+    
+          .color {
+            width: 25px;
+            height: 25px;
+            border: 1px solid var(--clr-n-300);
+            border-radius: 50%;
+          }
+    
+          .size {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: var(--clr-n-700);
+            border-radius: 2px;
+          }
+        }
+    
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            padding-top: .5rem;
+            border-top: 2px solid var(--clr-n-400);
+            margin-top: 2rem;
+            max-width: 600px;
+            flex-grow: 1;
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: var(--clr-n-400);
+    
+                p {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+        }
+        .item-buttons {
+            display: flex;
+            gap: 1rem;
+    
+            .btn-cart {
+                border: 2px solid var(--clr-n-300);
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+      }
+  }
+}
